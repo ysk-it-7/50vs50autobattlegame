@@ -1,0 +1,20 @@
+<engine:UXML xmlns:engine="UnityEngine.UIElements">
+    <engine:Style src="CharacterListItem.uss" />
+    <engine:VisualElement name="character-list-item-root" class="character-list-item">
+        <engine:Image name="character-icon" class="character-icon" />
+        <engine:VisualElement name="character-info" class="character-info">
+            <engine:VisualElement class="stats-row">
+                <engine:Label name="hp-label" text="HP: " class="stat-label" />
+                <engine:Label name="hp-value" text="000" class="stat-value" />
+                <engine:Label name="spd-label" text="SPD: " class="stat-label" style="margin-left: 10px;" />
+                <engine:Label name="spd-value" text="00" class="stat-value" />
+            </engine:VisualElement>
+            <engine:VisualElement class="stats-row">
+                <engine:Label name="atk-label" text="ATK: " class="stat-label" />
+                <engine:Label name="atk-value" text="000" class="stat-value" />
+                <engine:Label name="as-label" text="AS: " class="stat-label" style="margin-left: 10px;" />
+                <engine:Label name="as-value" text="0.0" class="stat-value" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

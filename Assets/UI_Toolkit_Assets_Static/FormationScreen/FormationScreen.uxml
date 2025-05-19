@@ -1,0 +1,32 @@
+<!-- FormationScreen.uxml -->
+<engine:UXML xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements">
+    <engine:Style src="FormationScreen.uss" />
+    <engine:VisualElement name="formation-screen-root" class="formation-screen-root">
+        <!-- 上部: 編成スロット選択ボタン (変更なし) -->
+        <engine:VisualElement name="slot-buttons-container" class="slot-buttons-container">
+            <engine:Button name="slot-button-1" text="1" class="slot-button active-slot-button" />
+            <engine:Button name="slot-button-2" text="2" class="slot-button" />
+            <engine:Button name="slot-button-3" text="3" class="slot-button" />
+        </engine:VisualElement>
+
+        <engine:VisualElement name="main-formation-content" class="main-formation-content">
+            <!-- 左側: キャラクター配置エリア -->
+            <engine:VisualElement name="placement-area" class="placement-area">
+                <!-- ★ ここに配置スロットを定義 (例: 3x3のグリッドなら9個) -->
+                <!-- 手動で書くか、C#で動的に生成する。今回はUXMLに直接記述する例 -->
+                <engine:VisualElement name="placement-slot-0" class="placement-slot empty-slot" />
+                <engine:VisualElement name="placement-slot-1" class="placement-slot empty-slot" />
+                <engine:VisualElement name="placement-slot-2" class="placement-slot empty-slot" />
+                <engine:VisualElement name="placement-slot-3" class="placement-slot empty-slot" />
+                <engine:VisualElement name="placement-slot-4" class="placement-slot empty-slot" />
+                <engine:VisualElement name="placement-slot-5" class="placement-slot empty-slot" />
+                <!-- 必要に応じてさらに追加 -->
+            </engine:VisualElement>
+
+            <!-- 右側: キャラクターリストエリア (変更なし) -->
+            <engine:ScrollView name="character-list-scrollview" class="character-list-scrollview">
+                <engine:VisualElement name="character-list-container" class="character-list-container"/>
+            </engine:ScrollView>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

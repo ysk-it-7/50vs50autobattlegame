@@ -1,0 +1,29 @@
+<engine:UXML xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements">
+    <engine:Style src="GachaScreen.uss" />
+
+    <!-- ガチャ画面のコンテンツをラップする要素 (この要素がgacha-screen-content-containerに追加される) -->
+    <engine:VisualElement name="gacha-content-wrapper" class="gacha-content-wrapper">
+        <!-- 閉じるボタンはナビゲーションで画面遷移するので不要 -->
+
+        <engine:VisualElement name="character-image-container" class="character-image-container">
+            <engine:Image name="character-image" class="character-image" pickable="false" />
+        </engine:VisualElement>
+
+        <engine:VisualElement name="summon-buttons-container" class="summon-buttons-container">
+            <engine:Button name="summon-gold-button" class="summon-button">
+                <engine:Label text="召喚" class="summon-button-text-large"/>
+                <engine:VisualElement class="summon-cost-container">
+                    <engine:Label text="100" class="summon-button-text-small"/>
+                    <engine:Image name="gold-icon" class="currency-icon gold-icon" />
+                </engine:VisualElement>
+            </engine:Button>
+            <engine:Button name="summon-ticket-button" class="summon-button">
+                <engine:Label text="召喚" class="summon-button-text-large"/>
+                <engine:VisualElement class="summon-cost-container">
+                    <engine:Image name="ticket-icon" class="currency-icon ticket-icon" />
+                    <engine:Label text="(3/3)" class="summon-button-text-small"/>
+                </engine:VisualElement>
+            </engine:Button>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

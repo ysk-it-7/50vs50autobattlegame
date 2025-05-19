@@ -1,0 +1,36 @@
+<engine:UXML xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements">
+    <engine:Style src="MainScreen.uss" />
+    <engine:VisualElement name="main-screen-container" class="main-screen-container">
+
+        <!-- メインコンテンツ表示エリア (この中に各画面のコンテナが入る) -->
+        <engine:VisualElement name="content-display-area" class="content-display-area">
+            <!-- ホーム画面 (戦闘画面) 用コンテナ -->
+            <engine:VisualElement name="home-screen-content-container" class="screen-content-container">
+                <engine:Label text="戦闘画面 (ホーム)" class="screen-placeholder-text"/>
+            </engine:VisualElement>
+
+            <!-- ガチャ画面用コンテナ (ここにGachaScreen.uxmlの中身がロードされる) -->
+            <engine:VisualElement name="gacha-screen-content-container" class="screen-content-container" style="display: none;" />
+            <!-- 他の画面用のコンテナも同様に追加 -->
+            <engine:VisualElement name="formation-screen-content-container" class="screen-content-container" style="display: none;">
+                <engine:Label text="編成画面のコンテンツ" class="screen-placeholder-text"/>
+            </engine:VisualElement>
+            <engine:VisualElement name="enhance-screen-content-container" class="screen-content-container" style="display: none;">
+                <engine:Label text="強化画面のコンテンツ" class="screen-placeholder-text"/>
+            </engine:VisualElement>
+            <engine:VisualElement name="shop-screen-content-container" class="screen-content-container" style="display: none;">
+                <engine:Label text="購買画面のコンテンツ" class="screen-placeholder-text"/>
+            </engine:VisualElement>
+        </engine:VisualElement>
+
+        <!-- 右側ナビゲーションメニューのコンテナ -->
+        <engine:VisualElement name="navigation-menu" class="navigation-menu">
+            <engine:Button name="home-button" text="ホーム" class="nav-button active" />
+            <engine:Button name="gacha-button" text="ガチャ" class="nav-button" />
+            <engine:Button name="formation-button" text="編成" class="nav-button" />
+            <engine:Button name="enhance-button" text="強化" class="nav-button" />
+            <engine:Button name="shop-button" text="購買" class="nav-button" />
+        </engine:VisualElement>
+
+    </engine:VisualElement>
+</engine:UXML>

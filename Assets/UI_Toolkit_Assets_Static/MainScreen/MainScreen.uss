@@ -1,0 +1,67 @@
+/* MainScreen.uss */
+.main-screen-container {
+    flex-grow: 1;
+    flex-direction: row;
+    /* background-color: rgb(50, 55, 70); */ /* 背景色をコメントアウトまたはtransparentに */
+    background-color: transparent; /* 背景を完全に透明にする */
+    /* border: 5px solid blue; */ /* もしこのような枠線指定があれば削除 */
+}
+
+.content-display-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    /* background-color: transparent; */ /* こちらも透明に */
+    /* padding: 0; */ /* 戦闘シーンをピッタリ表示するならパディングも0に */
+}
+
+.screen-content-container {
+    flex-grow: 1;
+    /* padding: 20px; */ /* パディングは各画面のUXML/USSで制御 */
+    display: flex; /* noneで非表示、flexで表示 */
+    align-items: center;
+    justify-content: center;
+    background-color: transparent; /* 各画面コンテナもデフォルトは透明に */
+}
+
+.screen-placeholder-text {
+    font-size: 24px;
+    color: rgb(80, 80, 80); /* 背景が明るい色になる可能性を考慮し、少し濃いめの文字色 */
+    -unity-text-align: middle-center;
+}
+
+/* ナビゲーションメニューとボタンのスタイルは前回と同様でOK */
+.navigation-menu {
+    width: 130px;
+    min-width: 130px;
+    padding: 15px 10px;
+    background-color: rgba(210, 210, 210, 0.85); /* 少し透明度を持たせることも可能 */
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.nav-button {
+    height: 55px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    background-color: rgb(180, 180, 180);
+    color: rgb(60, 60, 60);
+    border-width: 0;
+    border-radius: 8px;
+    -unity-text-align: middle-center;
+    transition: background-color 0.1s ease-out;
+}
+
+.nav-button.active {
+    background-color: rgb(70, 110, 200);
+    color: white;
+}
+
+.nav-button:hover {
+    background-color: rgb(160, 160, 160);
+}
+.nav-button.active:hover {
+    background-color: rgb(60, 100, 190);
+}

@@ -1,0 +1,48 @@
+/* CharacterListItem.uss */
+.character-list-item {
+    height: 70px; /* アイテムの高さ */
+    background-color: white;
+    margin: 8px 5px; /* 上下左右のマージン */
+    border-radius: 10px; /* 角丸 */
+    border: 1px solid rgb(210,210,210);
+    flex-direction: row; /* アイコンと情報を横に */
+    align-items: center; /* 縦方向中央揃え */
+    padding: 8px;
+    transition: background-color 0.1s ease-out;
+}
+.character-list-item:hover {
+    background-color: rgb(240,240,240);
+}
+
+.character-icon {
+    width: 54px; /* アイコンサイズ */
+    height: 54px;
+    min-width: 54px; /* 縮まないように */
+    margin-right: 10px;
+    background-color: rgb(200,200,200); /* ダミーアイコンの背景 */
+    border-radius: 5px;
+}
+
+.character-info {
+    flex-grow: 1; /* 残りの幅を使用 */
+    flex-direction: column; /* ステータス行を縦に */
+    justify-content: center; /* 縦方向中央に */
+}
+
+.stats-row {
+    flex-direction: row; /* HPとSPD、ATKとASをそれぞれ横に */
+    margin-bottom: 2px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: rgb(80,80,80);
+    width: 35px; /* ラベルの幅を固定 */
+}
+
+.stat-value {
+    font-size: 13px;
+    color: rgb(30,30,30);
+    -unity-font-style: bold;
+    width: 40px; /* 値の幅を固定 */
+}
